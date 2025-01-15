@@ -36,7 +36,7 @@ class FreelanceServiceTest {
     }
 
     @ParameterizedTest
-    @CsvFileSource(resources = "src/test/resources/test.csv")
+    @CsvFileSource(resources = "/test.csv")
     public void testParams(int income, int expenses, int threshold, int expected) {
         FreelanceService service = new FreelanceService();
         int actual = service.calculate(income, expenses, threshold);
